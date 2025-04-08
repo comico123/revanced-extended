@@ -21,10 +21,10 @@ jobs:
       run: bash revanced.sh
 
     - name: Delete older releases
-      uses: Nats-ji/delete-old-releases@v1.0.1
+      uses: s00d/delete-older-releases@0.2.1
       with:
-        keep-count: 1
-        remove-tags: true
+        keep_latest: 1
+        delete_tags: true
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
              
